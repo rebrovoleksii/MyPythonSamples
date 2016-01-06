@@ -14,7 +14,11 @@ def my_cool_decorator(function_to_decorate):
 def standalone_function():
     print "DONT TOUCH ME!!!"
 
+@my_cool_decorator
+def another_standalone_function():
+    print "What's up!!!"
 
 standalone_function_decorated = my_cool_decorator(standalone_function)
 
 standalone_function_decorated()
+another_standalone_function()
